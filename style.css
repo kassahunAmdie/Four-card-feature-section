@@ -1,0 +1,189 @@
+:root {
+  /* Primary */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+  --Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(220, 18%, 76%);
+  --Light-Gray: hsl(0, 0%, 98%);
+  --White-bckg: hsl(150, 5%, 98%);
+
+  /* Fonts */
+  --ff-primary: "Poppins", sans-serif;
+
+  --fw-extralight: 200;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+}
+
+/* CSS reset */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* End CSS reset */
+
+/* Utilities */
+
+.border-1 {
+  border-top: 4px solid var(--Cyan);
+}
+
+.border-2 {
+  border-top: 4px solid var(--Red);
+}
+
+.border-3 {
+  border-top: 4px solid var(--Orange);
+}
+
+.border-4 {
+  border-top: 4px solid var(--Blue);
+}
+
+
+/* End Utilities */
+
+body {
+  background-color: var(--White-bckg);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  font-size: 0.9375rem;
+  color: var(--Dark-Blue);
+  line-height: 1.5625;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 85px 32px 68px 32px;
+}
+
+h1 {
+  font-weight: var(--fw-semibold);
+  font-size: clamp(1.5rem, -0.205rem + 7.273vw, 2.25rem);
+  margin-bottom: 16px;
+}
+
+h1 > span {
+  display: block;
+  font-weight: var(--fw-extralight);
+}
+
+h2 {
+  font-weight: var(--fw-semibold);
+  font-size: 1.25rem;
+  margin-bottom: clamp(0.063rem, -0.048rem + 0.469vw, 0.375rem);
+}
+
+p {
+  font-weight: var(--fw-extralight);
+}
+
+.intro {
+  max-width: 540px;
+  padding: 0 4px;
+  text-align: center;
+  margin-bottom: 76px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1100px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--White-bckg);
+  border-radius: 0.5rem;
+  filter: drop-shadow(0 4px 16px var(--Grayish-Blue));
+  padding: clamp(1.75rem, 1.662rem + 0.376vw, 2rem);
+  /* max-width: 350px;
+  flex: 1 311px; */
+  width: clamp(19.438rem, 18.579rem + 3.662vw, 21.875rem);
+}
+
+.card p {
+  font-size: 0.8125rem;
+  margin-bottom: clamp(2.063rem, 1.908rem + 0.657vw, 2.5rem);
+}
+
+img {
+  width: 57px;
+  height: 57px;
+}
+
+.icon {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.supervisor {
+  /* For the mobile version only to match Figma design*/
+  margin-bottom: 2px;  
+}
+
+.karma {
+  /* For the mobile version only to match Figma design*/
+  margin-bottom: 11px;  
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+
+@media screen and (min-width : 44.3125em) {
+  .cards {
+    gap: 30px;
+  }
+
+  .supervisor, .karma {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width : 66.0625em) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+  }
+
+  .karma {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .supervisor, .calculator {
+    transform: translateY(50%);
+  }
+
+  img {
+    width: 64px;
+    height: 64px;
+  }
+}
