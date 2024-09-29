@@ -167,7 +167,7 @@ img {
   }
 }
 
-@media screen and (min-width : 66.0625em) {
+@media screen and (min-width : 68.75em) {
   .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr );
