@@ -173,6 +173,10 @@ img {
     padding-block: 80px;
   }
 
+  .intro {
+    margin-bottom: 64px;
+  }
+
   .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr );
