@@ -78,6 +78,7 @@ h1 {
   font-weight: var(--fw-semibold);
   font-size: clamp(1.5rem, -0.205rem + 7.273vw, 2.25rem);
   margin-bottom: 16px;
+  line-height: 1.4165;
 }
 
 h1 > span {
