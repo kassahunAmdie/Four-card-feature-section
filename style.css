@@ -168,6 +168,9 @@ img {
 }
 
 @media screen and (min-width : 68.75em) {
+  .wrapper {
+    padding: 80px auto;
+  }
   .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr );
